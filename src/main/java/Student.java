@@ -1,23 +1,23 @@
 public class Student {
-    private String _Nombre;
-    private int _Tipo;
-    private int _notaBase =11;
+    private String nombre;
+    private int tipo;
+    private int notaBase =11;
     static final int Pregado = 0;
     static final int Maestria = 1;
     static final int Doctorado = 2;
 
     Student(int type, String nombre) {
-        _Tipo = type;
-        _Nombre = nombre;
+        tipo = type;
+        this.nombre = nombre;
     }
     int Grado() {
-        switch (_Tipo) {
+        switch (tipo) {
             case Pregado:
-                return _notaBase;
+                return notaBase;
             case Maestria:
-                return _notaBase + 1;
+                return notaBase + 1;
             case Doctorado:
-                return _notaBase + 2;
+                return notaBase + 2;
             default:
                 throw new RuntimeException("Empleado incorrecto");
         }

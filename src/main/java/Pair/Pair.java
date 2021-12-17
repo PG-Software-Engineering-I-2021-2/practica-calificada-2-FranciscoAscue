@@ -1,3 +1,5 @@
+package Pair;
+
 public final class Pair<FirstType, SecondType> {
     final private FirstType first;
     final private SecondType second;
