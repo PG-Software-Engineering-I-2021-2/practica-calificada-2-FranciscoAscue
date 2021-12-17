@@ -22,7 +22,7 @@ public class PrincipalTest {
         final List<Pair<Integer, Float>> examsGrades              = List.of(new Pair<>(100, 5f));
         final boolean                    hasReachedMinimumClasses = true;
 
-        Assert.assertEquals(6, studentGradeCalculator.calculateGrades(examsGrades, hasReachedMinimumClasses));
+        Assert.assertEquals(5, studentGradeCalculator.calculateGrades(examsGrades, hasReachedMinimumClasses));
     }
 
     @Test
@@ -43,7 +43,7 @@ public class PrincipalTest {
         );
         final boolean hasReachedMinimumClasses = true;
 
-        Assert.assertEquals(6, studentGradeCalculator.calculateGrades(examsGrades, hasReachedMinimumClasses));
+        Assert.assertEquals(5, studentGradeCalculator.calculateGrades(examsGrades, hasReachedMinimumClasses));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class PrincipalTest {
         );
         final boolean hasReachedMinimumClasses = true;
 
-        Assert.assertEquals(5.5f, studentGradeCalculator.calculateGrades(examsGrades, hasReachedMinimumClasses));
+        Assert.assertEquals(4.5f, studentGradeCalculator.calculateGrades(examsGrades, hasReachedMinimumClasses));
     }
 
     // hasReachedMinimumClasses
@@ -149,7 +149,7 @@ public class PrincipalTest {
         final List<Pair<Integer, Float>> examsGrades              = List.of(new Pair<>(100, 9.8f));
         final boolean                    hasReachedMinimumClasses = true;
 
-        Assert.assertEquals(10, studentGradeCalculator.calculateGrades(examsGrades, hasReachedMinimumClasses));
+        Assert.assertEquals(9.8f, studentGradeCalculator.calculateGrades(examsGrades, hasReachedMinimumClasses));
     }
 
     @Test

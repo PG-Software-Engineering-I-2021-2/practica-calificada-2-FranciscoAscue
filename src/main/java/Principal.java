@@ -79,7 +79,7 @@ public class Principal {
             if (!(yearToCalculate != yearlyTeachers.getKey())) {
                 List<Pair<TeacherCompleto, Boolean>> teachers = yearlyTeachers.getValue();
                 for (Pair<TeacherCompleto, Boolean> teacher : teachers) {
-                    if (teacher.first().Sueldo() == 1 && teacher.second() != true) {
+                    if (teacher.first().getTipo() == 1 && teacher.second() != true) {
                         continue;
                     }
                     hasToIncreaseOneExtraPoint = true;
