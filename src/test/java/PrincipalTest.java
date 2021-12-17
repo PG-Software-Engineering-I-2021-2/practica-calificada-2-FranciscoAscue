@@ -1,4 +1,4 @@
-import Pair.Pair;
+import Sistema.Pair;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

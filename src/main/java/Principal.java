@@ -1,4 +1,5 @@
-import Pair.Pair;
+import Sistema.Pair;
+import Particular.TeacherCompleto;
 
 import java.util.AbstractMap;
 import java.util.List;
@@ -12,21 +13,21 @@ public class Principal {
     }
 
 
-    final private Map<Integer, List<Pair<Teacher, Boolean>>> allYearsTeachers = Map.ofEntries(
+    final private Map<Integer, List<Pair<TeacherCompleto, Boolean>>> allYearsTeachers = Map.ofEntries(
             new AbstractMap.SimpleImmutableEntry<>(
                     2020,
                     List.of(
-                            new Pair<>( new Teacher(1,"Josefina"), true),
-                            new Pair<>( new Teacher(1,"Edonisio"), true),
-                            new Pair<>( new Teacher(1,"Edufasio"), false)
+                            new Pair<>( new TeacherCompleto("Josefina"), true),
+                            new Pair<>( new TeacherCompleto("Edonisio"), true),
+                            new Pair<>( new TeacherCompleto("Edufasio"), false)
                     )
             ),
             new AbstractMap.SimpleImmutableEntry<>(
                     2019,
                     List.of(
-                            new Pair<>( new Teacher(1,"Eduarda"), false),
-                            new Pair<>( new Teacher(1,"Abelardo"), false),
-                            new Pair<>( new Teacher(1,"Francisca"), false)
+                            new Pair<>( new TeacherCompleto("Eduarda"), false),
+                            new Pair<>( new TeacherCompleto("Abelardo"), false),
+                            new Pair<>( new TeacherCompleto("Francisca"), false)
                     )
             )
     );
@@ -74,10 +75,10 @@ public class Principal {
     }
 
     private boolean isHasToIncreaseOneExtraPoint(boolean hasToIncreaseOneExtraPoint) {
-        for (Map.Entry<Integer, List<Pair<Teacher, Boolean>>> yearlyTeachers : allYearsTeachers.entrySet()) {
+        for (Map.Entry<Integer, List<Pair<TeacherCompleto, Boolean>>> yearlyTeachers : allYearsTeachers.entrySet()) {
             if (!(yearToCalculate != yearlyTeachers.getKey())) {
-                List<Pair<Teacher, Boolean>> teachers = yearlyTeachers.getValue();
-                for (Pair<Teacher, Boolean> teacher : teachers) {
+                List<Pair<TeacherCompleto, Boolean>> teachers = yearlyTeachers.getValue();
+                for (Pair<TeacherCompleto, Boolean> teacher : teachers) {
                     if (teacher.first().Sueldo() == 1 && teacher.second() != true) {
                         continue;
                     }

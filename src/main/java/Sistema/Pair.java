@@ -1,4 +1,4 @@
-package Pair;
+package Sistema;
 
 public final class Pair<FirstType, SecondType> {
     final private FirstType first;
