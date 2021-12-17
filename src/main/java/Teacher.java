@@ -1,4 +1,4 @@
-public class Teacher {
+public class Teacher implements Profesor  {
     private String nombre;
     private int tipo;
     private int salarioBaseMensual =2000;
